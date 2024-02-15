@@ -27,3 +27,6 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     clean(args.input1, args.input2, args.output)
+
+    cleaned = pd.read_csv(args.output)
+    print("Shape of the output file:", cleaned.shape)
